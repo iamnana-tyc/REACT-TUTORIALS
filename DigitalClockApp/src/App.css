@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+}
+.clock-container {
+  background-color: #282c34;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.clock{
+  background-color: #2023;
+  color: #61dafb;
+  font-size: 4rem;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 20px 40px;
+  border-radius: 10px;
+}
