@@ -7,11 +7,12 @@ function App()
   //const myTheme = 'dark';
 
   return (
-    <div style={{ border: '2px solid black', padding: '10px' }}>
-      <h2>App (Parent)</h2>
-      <ComponentA />
-    </div>
-
+    <ThemeContext.Provider value="red">
+      <div style={{ border: '2px solid black', padding: '10px' }}>
+        <h2>App (Parent)</h2>
+        <ComponentA />
+      </div>
+    </ThemeContext.Provider>
   );
 };
 
