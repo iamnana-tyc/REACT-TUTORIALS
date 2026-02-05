@@ -2,6 +2,7 @@
 import { useEffect } from 'react'
 import './App.css'
 import { useState } from 'react';
+import axios from 'axios';
 
 function App()
 {
@@ -12,11 +13,11 @@ function App()
   useEffect(() =>
   {
     setLoading(true);
-    fetch('https://jsonplaceholder.typicode.com/todos/1')
-      .then(response => response.json())
-      .then(json =>
+    axios.get('https://jsonplaceholder.typicode.com/todos/1')
+      .then((response) =>
       {
-        setData(json);
+        console.log(response)
+        setData(response.data);
         setLoading(false);
       })
       .catch((error) =>
