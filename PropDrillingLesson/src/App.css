@@ -1,0 +1,11 @@
+* {
+  margin: 0;
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+  
