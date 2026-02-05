@@ -4,27 +4,19 @@ import './App.css'
 
 function App()
 {
-  const [stateCount, setStateCount] = useState(0);
-  const refCount = useRef(0);
+  const inputRef = useRef(null);
 
-  const increementStateCount = () =>
+  const focusOnRef = () =>
   {
-    setStateCount(stateCount + 1);
-  };
-
-  const increementRefCount = () =>
-  {
-    refCount.current += 1;
-    console.log(`Ref count: ${refCount.current} `);
+    //console.log(inputRef);
+    inputRef.current.focus();
   };
 
   return (
     <div>
-      <p>State count: {stateCount}</p>
-      <button onClick={increementStateCount}>Increement State count</button>
+      <input ref={inputRef} type='text' placeholder='Focus on me'></input>
+      <button onClick={focusOnRef}>Focus</button>
 
-      <p>Ref count: {refCount.current}</p>
-      <button onClick={increementRefCount}>Increement Ref count</button>
     </div>
   )
 }
